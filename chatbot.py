@@ -1,3 +1,4 @@
+from datetime import datetime
 def lads():
     print("Hey!!I'm LADS.\nYou can ask me things related to Kaushal.\nEnter 'info' to view all the commands")
     user_input = '' # Important Aspect for future
@@ -8,6 +9,8 @@ def lads():
         "contact   -   To know about how to connect",
         "skills    -   To know about the skills",
         "projects  -   To know about projects",
+        "time      -   Current date and time",
+        "date      -   Current date and time",
         "exit      -   To terminate the code",
         "quit      -   To terminate the code",
         "end       -   To terminate the code"
@@ -48,6 +51,11 @@ LinkedIn - https://linkedin.com/in/nikk18/
             print("""
 1. To-Do list CLI
 2. Lads (Learning & Working)
+                """)
+        elif user_input == 'date' or user_input == 'time':
+            dateTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"""
+{dateTime}
                 """)
 
 
