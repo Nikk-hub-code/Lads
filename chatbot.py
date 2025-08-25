@@ -1,4 +1,5 @@
 from datetime import datetime
+import random
 def lads():
     print("Hey!!I'm LADS.\nYou can ask me things related to Kaushal.\nEnter 'info' to view all the commands")
     user_input = '' # Important Aspect for future
@@ -8,7 +9,7 @@ def lads():
         "about     -   To know about me",
         "contact   -   To know about how to connect",
         "skills    -   To know about the skills",
-        "projects  -   To know about projects",
+        "project   -   To know about projects",
         "time      -   Current date and time",
         "date      -   Current date and time",
         "exit      -   To terminate the code",
@@ -31,6 +32,14 @@ def lads():
             
             for i in commands:
                 print(f"{i}")
+        elif (word in user_input for word in ["hello", "hii", "hey", "greet"]):
+            response = [
+                "Hello! How can I assist you today?",
+                "Hi there! What can I help you with?",
+                "Hey! How can I be of service?",
+                "Greetings! How may I help you today?"
+            ]
+            print(f"{random.choice(response)}")
         elif user_input == 'about':
             print("""
 Hii! Kaushal this side. I'm a 3rd year B.tech(CSE) student who is keen to learn new stuffs related to tech. This is my small part of the major project which I hope I will complete in near future.
@@ -47,7 +56,7 @@ LinkedIn - https://linkedin.com/in/nikk18/
 2. Front-End (HTML, CSS, JS)
 3. WordPress
                 """)
-        elif user_input == 'projects':
+        elif user_input == 'project':
             print("""
 1. To-Do list CLI
 2. Lads (Learning & Working)
