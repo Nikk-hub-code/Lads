@@ -32,7 +32,7 @@ def lads():
             
             for i in commands:
                 print(f"{i}")
-        elif (word in user_input for word in ["hello", "hii", "hey", "greet"]):
+        elif any(word in user_input for word in ["hello", "hii", "hey", "greet"]):
             response = [
                 "Hello! How can I assist you today?",
                 "Hi there! What can I help you with?",
