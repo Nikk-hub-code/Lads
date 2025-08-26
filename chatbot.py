@@ -16,6 +16,8 @@ def lads():
         "quit      -   To terminate the code",
         "end       -   To terminate the code"
     ]
+    positive = ['good']
+    negative = ['bad']
     while user_input not in exitCommands:          #This logic will atleast run a loop once which will consume resources
         user_input = input("> ").lower().strip()
 
@@ -66,6 +68,10 @@ LinkedIn - https://linkedin.com/in/nikk18/
             print(f"""
 {dateTime}
                 """)
+        elif any(word in user_input for word in positive):
+            print(f"That's seem a positive sentiment.")
+        elif any(word in user_input for word in negative):
+            print(f"That's seem to be negative sentiment.")
 
 
 if __name__ == "__main__":
