@@ -16,8 +16,8 @@ def lads():
         "quit      -   To terminate the code",
         "end       -   To terminate the code"
     ]
-    positive = ['good']
-    negative = ['bad']
+    positive = ['good', 'happy']
+    negative = ['bad', 'sad']
     while user_input not in exitCommands:          #This logic will atleast run a loop once which will consume resources
         user_input = input("> ").lower().strip()
 
