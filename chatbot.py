@@ -16,8 +16,8 @@ def lads():
         "quit      -   To terminate the code",
         "end       -   To terminate the code"
     ]
-    positive = ['good', 'happy']
-    negative = ['bad', 'sad']
+    positive = ['good','happy']
+    negative = ['bad','sad']
     while user_input not in exitCommands:          #This logic will atleast run a loop once which will consume resources
         user_input = input("> ").lower().strip()
 
@@ -64,11 +64,13 @@ LinkedIn - https://linkedin.com/in/nikk18/
 2. Lads (Learning & Working)
                 """)
         elif user_input == 'date' or user_input == 'time':
-            dateTime = datetime.now().strftime("%Y-%m-%d \n%H:%M:%S")
+            dateTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             print(f"""
 {dateTime}
                 """)
-        elif any(word in user_input for word in positive):
+
+        #Sentiment Analysis
+        if any(word in user_input for word in positive):
             print(f"That's seem a positive sentiment.")
         elif any(word in user_input for word in negative):
             print(f"That's seem to be negative sentiment.")
