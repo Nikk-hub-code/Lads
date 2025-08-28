@@ -64,7 +64,7 @@ LinkedIn - https://linkedin.com/in/nikk18/
 2. Lads (Learning & Working)
                 """)
         elif user_input == 'date' or user_input == 'time':
-            dateTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            dateTime = datetime.now().strftime("%Y-%m-%d \n%H:%M:%S")
             print(f"""
 {dateTime}
                 """)
