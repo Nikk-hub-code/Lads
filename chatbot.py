@@ -104,7 +104,7 @@ LinkedIn - https://linkedin.com/in/nikk18/
             
         # Check for greetings
         if any(word in cleaned_input for word in self.greeting_words):
-            return random.choice(self.greeting_responses)
+            return print(random.choice(self.greeting_responses))
             
         # Check for specific commands
         if cleaned_input == "info":
