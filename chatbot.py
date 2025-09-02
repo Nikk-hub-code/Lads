@@ -1,6 +1,5 @@
 from datetime import datetime
 import random
-import re
 
 class LADS:
     def __init__(self):
